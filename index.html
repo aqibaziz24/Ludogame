@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Play Game</title>
+
+
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="root"></div>
+<div id="game-wrap" style="display:none">
+<div id="emoji-houses">
+  <div class="emoji-house eh-red" data-house="red"><button class="eh-toggle" aria-label="Red emojis">😊</button><div class="eh-list"><button data-emoji="😊">😊</button><button data-emoji="😂">😂</button><button data-emoji="🤣">🤣</button><button data-emoji="😅">😅</button><button data-emoji="😬">😬</button><button data-emoji="😕">😕</button><button data-emoji="🙄">🙄</button><button data-emoji="🤕">🤕</button><button data-emoji="🥳">🥳</button><button data-emoji="😭">😭</button><button data-emoji="🤗">🤗</button><button data-emoji="☹">☹</button><button data-emoji="😢">😢</button><button data-emoji="😡">😡</button><button data-emoji="😤">😤</button><button data-emoji="👻">👻</button><button data-emoji="🙏">🙏</button><button data-emoji="🤝">🤝</button><button data-emoji="🐍">🐍</button><button data-emoji="🐢">🐢</button><button data-emoji="🔪">🔪</button><button data-emoji="😋">😋</button><button data-emoji="🤪">🤪</button><button data-emoji="😐">😐</button><button data-emoji="🤔">🤔</button><button data-emoji="😒">😒</button><button data-emoji="🤨">🤨</button><button data-emoji="😱">😱</button></div></div>
+  <div class="emoji-house eh-blue" data-house="blue"><button class="eh-toggle" aria-label="Blue emojis">😊</button><div class="eh-list"><button data-emoji="😊">😊</button><button data-emoji="😂">😂</button><button data-emoji="🤣">🤣</button><button data-emoji="😅">😅</button><button data-emoji="😬">😬</button><button data-emoji="😕">😕</button><button data-emoji="🙄">🙄</button><button data-emoji="🤕">🤕</button><button data-emoji="🥳">🥳</button><button data-emoji="😭">😭</button><button data-emoji="🤗">🤗</button><button data-emoji="☹">☹</button><button data-emoji="😢">😢</button><button data-emoji="😡">😡</button><button data-emoji="😤">😤</button><button data-emoji="👻">👻</button><button data-emoji="🙏">🙏</button><button data-emoji="🤝">🤝</button><button data-emoji="🐍">🐍</button><button data-emoji="🐢">🐢</button><button data-emoji="🔪">🔪</button><button data-emoji="😋">😋</button><button data-emoji="🤪">🤪</button><button data-emoji="😐">😐</button><button data-emoji="🤔">🤔</button><button data-emoji="😒">😒</button><button data-emoji="🤨">🤨</button><button data-emoji="😱">😱</button></div></div>
+  <div class="emoji-house eh-green" data-house="green"><button class="eh-toggle" aria-label="Green emojis">😊</button><div class="eh-list"><button data-emoji="😊">😊</button><button data-emoji="😂">😂</button><button data-emoji="🤣">🤣</button><button data-emoji="😅">😅</button><button data-emoji="😬">😬</button><button data-emoji="😕">😕</button><button data-emoji="🙄">🙄</button><button data-emoji="🤕">🤕</button><button data-emoji="🥳">🥳</button><button data-emoji="😭">😭</button><button data-emoji="🤗">🤗</button><button data-emoji="☹">☹</button><button data-emoji="😢">😢</button><button data-emoji="😡">😡</button><button data-emoji="😤">😤</button><button data-emoji="👻">👻</button><button data-emoji="🙏">🙏</button><button data-emoji="🤝">🤝</button><button data-emoji="🐍">🐍</button><button data-emoji="🐢">🐢</button><button data-emoji="🔪">🔪</button><button data-emoji="😋">😋</button><button data-emoji="🤪">🤪</button><button data-emoji="😐">😐</button><button data-emoji="🤔">🤔</button><button data-emoji="😒">😒</button><button data-emoji="🤨">🤨</button><button data-emoji="😱">😱</button></div></div>
+  <div class="emoji-house eh-orange" data-house="orange"><button class="eh-toggle" aria-label="Orange emojis">😊</button><div class="eh-list"><button data-emoji="😊">😊</button><button data-emoji="😂">😂</button><button data-emoji="🤣">🤣</button><button data-emoji="😅">😅</button><button data-emoji="😬">😬</button><button data-emoji="😕">😕</button><button data-emoji="🙄">🙄</button><button data-emoji="🤕">🤕</button><button data-emoji="🥳">🥳</button><button data-emoji="😭">😭</button><button data-emoji="🤗">🤗</button><button data-emoji="☹">☹</button><button data-emoji="😢">😢</button><button data-emoji="😡">😡</button><button data-emoji="😤">😤</button><button data-emoji="👻">👻</button><button data-emoji="🙏">🙏</button><button data-emoji="🤝">🤝</button><button data-emoji="🐍">🐍</button><button data-emoji="🐢">🐢</button><button data-emoji="🔪">🔪</button><button data-emoji="😋">😋</button><button data-emoji="🤪">🤪</button><button data-emoji="😐">😐</button><button data-emoji="🤔">🤔</button><button data-emoji="😒">😒</button><button data-emoji="🤨">🤨</button><button data-emoji="😱">😱</button></div></div>
+</div>
+
+<div id="game-topbar"><button id="back-to-lobby">Back</button><span id="game-mode-label">Play Game</span></div>
+<div id="game-root"></div>
+<div id="game-chat">
+  </div>
+  <div class="chat-row">
+    <input id="chat-input" type="text" maxlength="30" placeholder="Chhota message likho..." autocomplete="off">
+    <span id="chat-count">0/30</span>
+    <button type="button" id="chat-send">Send</button>
+  </div>
+</div>
+</div>
+<div id="team-select" style="display:none">
+<div class="team-card">
+<h3>Select Your Team</h3>
+<p class="team-sub">Ek team select karo, dobara dabao to unselect ho jayegi.</p>
+<button type="button" id="team-btn-a" class="team-btn">Team A <span>Red + Orange</span></button>
+<button type="button" id="team-btn-b" class="team-btn">Team B <span>Blue + Green</span></button>
+<button type="button" id="team-start-btn" class="team-start" disabled>Start</button>
+<button type="button" class="team-cancel">Cancel</button>
+</div>
+</div>
+
+
+
+
+
+<!-- Music / sounds removed: game is fully silent -->
+
+
+
+
+
+
+
+
+
+<!-- ===== APPWRITE ONLINE 1v1 (design unchanged, sirf logic add hua) ===== -->
+  <!-- Appwrite SDK (external, original CDN - unchanged) -->
+  <script src="https://cdn.jsdelivr.net/npm/appwrite@16.0.2"></script>
+  <script src="script.js"></script>
+</body>
